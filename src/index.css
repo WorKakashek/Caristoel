@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --index: (1vw + 1vh);
+}
+// Header(Paralax)
+.MyHeader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  perspective: 1500px;
+}
+.MyLayres {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.Mylayer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+.Mylayer-main {
+  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  background-image: url("mainlayer.png");
+}
+.Mylayer-middle {
+  transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
+  background-image: url("secondlayer.png");
+  z-index: 2;
+}
+.Mylayer-first {
+  transform: translate3d(0, calc(var(--scrollTop) / 3.6), 0);
+  background-image: url("firslayer.png");
+  z-index: 3;
+}
+.Mytext {
+  z-index: 1;
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  text-align: center;
+  text-transform: uppercase;
+  will-change: transform;
+  font-weight: 900;
+}
+.Mytitle {
+  font-size: calc(var(--index) * 3);
+}
+.MYunder-title {
+  font-size: calc(var(--index) * 1.5);
+}
+//Canvas
+.MyCanvas {
+  height: 600px;
+  /* height: calc(var(--index) * 10) !important; */
+}
+//
+.tabs {
+  background-color: "#ffffff";
+}
