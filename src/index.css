@@ -29,16 +29,16 @@
 }
 .Mylayer-main {
   transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-  background-image: url("mainlayer.png");
+  background-image: url("public/mainlayer.png");
 }
 .Mylayer-middle {
   transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
-  background-image: url("secondlayer.png");
+  background-image: url("public/secondlayer.png");
   z-index: 2;
 }
 .Mylayer-first {
   transform: translate3d(0, calc(var(--scrollTop) / 3.6), 0);
-  background-image: url("firslayer.png");
+  background-image: url("public/firslayer.png");
   z-index: 3;
 }
 .Mytext {

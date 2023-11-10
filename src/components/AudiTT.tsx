@@ -5,7 +5,7 @@ import { useSnapshot } from "valtio";
 
 export function AudiTT(props: any) {
   //@ts-ignore
-  const { nodes, materials } = useGLTF("./models/audiTT.glb");
+  const { nodes, materials } = useGLTF("models/audiTT.glb");
 
   const snap = useSnapshot(state);
 
@@ -244,4 +244,4 @@ export function AudiTT(props: any) {
   );
 }
 
-useGLTF.preload("./models/audiTT.glb");
+useGLTF.preload("models/audiTT.glb");
