@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useSnapshot } from "valtio";
+//@ts-ignore
 import state from "../../store/index.js";
 interface ITexturePicker {
   options: Array<object>;
 }
 
 const TexturePicker = ({ options }: ITexturePicker) => {
+  //@ts-ignore
   const snap = useSnapshot(state);
+  //@ts-ignore
   const [selectedOption, setSelectedOption] = useState(null);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-
+  //@ts-ignore
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setDropdownOpen(false);
@@ -29,10 +32,14 @@ const TexturePicker = ({ options }: ITexturePicker) => {
           {options.map((option) => (
             <li
               className="cursor-pointer font-bold"
+              //@ts-ignore
               key={option.id}
               onClick={() => handleOptionClick(option)}
             >
-              {option.name}
+              {
+                //@ts-ignore
+                option.name
+              }
             </li>
           ))}
         </ul>

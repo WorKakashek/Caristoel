@@ -1,5 +1,5 @@
-import React from "react";
 import { useSnapshot } from "valtio";
+//@ts-ignore
 import state from "../../store/index.js";
 
 interface ITab {
@@ -8,7 +8,7 @@ interface ITab {
   handleClick?: any;
 }
 
-const Tab = ({ customStyle, name, handleClick }: ITab) => {
+const Tab = ({ name, handleClick }: ITab) => {
   const snap = useSnapshot(state);
   switch (snap.activeTab) {
     case "color":

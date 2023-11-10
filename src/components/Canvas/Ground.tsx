@@ -1,6 +1,6 @@
 import { MeshReflectorMaterial } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { LinearEncoding, RepeatWrapping, TextureLoader } from "three";
 
 const Ground = () => {
@@ -38,6 +38,7 @@ const Ground = () => {
         reflectorOffset={0.2}
         normalMap={normal}
         roughnessMap={roughness}
+        //@ts-ignore
         normalScale={[0.15, 0.15]}
       />
     </mesh>
