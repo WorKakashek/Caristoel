@@ -1,4 +1,5 @@
-import { Decal, useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
+//@ts-ignore
 import state from "../store/index.js";
 import { useSnapshot } from "valtio";
 
@@ -53,7 +54,7 @@ export function AudiTT(props: any) {
       break;
   }
 
-  const logo = useTexture(snap.logo);
+  // const logo = useTexture(snap.logo);
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.car.geometry}>

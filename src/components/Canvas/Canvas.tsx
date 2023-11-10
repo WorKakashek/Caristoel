@@ -1,12 +1,11 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import CarModel from "./CarModel";
 import { useSnapshot } from "valtio";
+//@ts-ignore
 import state from "../../store/index.js";
 import ColorPicker from "./ColorPicker.js";
 import TexturePicker from "./TexturePicker.js";
-import FilePicker from "./FilePicker.js";
-import { AudiTT } from "../AudiTT.js";
 const CanvasMain = () => {
   const snap = useSnapshot(state);
   return (
@@ -18,7 +17,7 @@ const CanvasMain = () => {
         <TexturePicker options={snap.textures} />
       </div>
       <div className=" rounded-md p-2 z-10 absolute flex left-3 bottom-3 bg-red-600 ">
-        <FilePicker modelJSX={<AudiTT />} />
+        {/* <FilePicker modelJSX={<AudiTT />} /> */}
       </div>
       <Suspense>
         <Canvas>

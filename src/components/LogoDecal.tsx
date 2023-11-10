@@ -9,7 +9,9 @@ function LogoDecal(props: any) {
   const [clicked, click] = useState(false);
   useCursor(hovered);
   useFrame(
+    //@ts-ignore
     (state, delta) =>
+      //@ts-ignore
       (meshRef.current.rotation.x = meshRef.current.rotation.y += delta)
   );
   return (

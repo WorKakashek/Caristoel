@@ -20,6 +20,7 @@ function FilePicker() {
           console.error("Failed to export model:", result);
         }
       },
+      //@ts-ignore
       { binary: true }
     );
   }
